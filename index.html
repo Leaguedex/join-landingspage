@@ -61,7 +61,10 @@
       const downloadButton = document.getElementById('download-button');
 
       downloadButton.addEventListener('click', async () => {
-        await fetch("https://api.leaguedex.app/track/download").catch(console.error)
+        await fetch("https://api.leaguedex.app/track/download", {
+          method: "POST",
+          body: JSON.stringify({ })
+        }).catch(console.error)
       });
     </script>
   </body>
