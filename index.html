@@ -32,6 +32,7 @@
         <a
           href="https://leaguedex-releases.ams3.digitaloceanspaces.com/Leaguedex-setup.exe"
           class="cta-button cta-primary"
+          id="download-button"
           >Download</a
         >
         <div class="discord-button-container">
@@ -56,5 +57,13 @@
         </div>
       </div>
     </div>
+    <script>
+      const downloadButton = document.getElementById('download-button');
+
+      downloadButton.addEventListener('click', async () => {
+        await fetch("https://api.leaguedex.com/track/download").catch(console.error)
+      });
+    </script>
   </body>
+
 </html>
