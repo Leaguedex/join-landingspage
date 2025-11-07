@@ -2,40 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Join Leaguedex</title>
-    <link
-      rel="stylesheet"
-      href="style.css"
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="icon.ico" />
+    <meta
+      name="description"
+      content="Leaguedx - Your Virtual Gaming Coach. Break bad habits, build winning routines, and level up your gameplay with intelligent TTS coaching that keeps you focused, aware, and always improving."
     />
-  <link rel="icon" type="image/x-icon" href="icon.ico">
-  <meta name="description" content="Leaguedx - Your Virtual Gaming Coach. Break bad habits, build winning routines, and level up your gameplay with intelligent TTS coaching that keeps you focused, aware, and always improving.">
   </head>
   <body>
     <div class="hero">
       <div class="glow glow-1"></div>
       <div class="glow glow-2"></div>
 
-      <h1>Leaguedex</h1>
-      <p class="tagline">Your Virtual Gaming Coach</p>
+      <div class="hero-content">
+        <h1>Leaguedex</h1>
+        <p class="tagline">Your Virtual Gaming Coach</p>
 
-      <p class="description">
-        Break bad habits. Build winning routines. Level up your gameplay with
-        intelligent TTS coaching that keeps you focused, aware, and always
-        improving.
-      </p>
+        <p class="description">
+          Break bad habits. Build winning routines. Level up your gameplay with
+          intelligent TTS coaching that keeps you focused, aware, and always
+          improving.
+        </p>
 
-      <div class="cta-container">
-        <a
-          href="https://github.com/donnyroufs/leaguedex.app/releases/latest/download/Leaguedex-setup.exe"
-          class="cta-button cta-primary"
-          id="download-button"
-          >Download</a
-        >
-        <div class="discord-button-container">
+        <p class="main-site-link">
+          <a href="https://leaguedex.app">Visit our new website →</a>
+        </p>
+
+        <div class="cta-container">
+          <a
+            href="https://github.com/donnyroufs/leaguedex.app/releases/latest/download/Leaguedex-setup.exe"
+            class="cta-button cta-primary"
+            id="download-button"
+            >Download</a
+          >
           <a
             href="https://discord.com/invite/JShSD3ehw3"
             class="cta-button cta-secondary"
@@ -53,20 +54,21 @@
             </svg>
             Join Discord
           </a>
-          <p class="license-text">(and get a license)</p>
         </div>
+        <p class="license-text">
+          License no longer required since v0.5.0 → Update 11 nov
+        </p>
       </div>
     </div>
     <script>
-      const downloadButton = document.getElementById('download-button');
+      const downloadButton = document.getElementById("download-button");
 
-      downloadButton.addEventListener('click', async () => {
+      downloadButton.addEventListener("click", async () => {
         await fetch("https://api.leaguedex.app/track/download", {
           method: "POST",
-          body: JSON.stringify({ })
-        }).catch(console.error)
+          body: JSON.stringify({}),
+        }).catch(console.error);
       });
     </script>
   </body>
-
 </html>
